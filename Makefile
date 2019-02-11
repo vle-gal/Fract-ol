@@ -14,7 +14,7 @@ NAME = Fract\'ol #Makefile simple
 vpath %.c basic #les .c
 vpath_h = -Idoth -Ilibft/doth -Iminilibx_macos #les .h
 LIB = -Llibft -lft -Lminilibx_macos -lmlx
-framework = -framework OpenGl -framework AppKit
+frameworks = -framework OpenGl -framework AppKit
 
 #les couleurs et autre
 Y = "\033[33m"
@@ -30,7 +30,7 @@ OBJDIR := objdiro
 OBJS := $(addprefix $(OBJDIR)/,main.o sec.o)
 
 $(OBJDIR)/%.o : %.c
-	@gcc $(CPPFLAGS) $(CFLAGS) $(vpath_h) -Wall -Wextra -Werror -c \
+	@gcc $(CPPFLAGS) $(CFLAGS) $(vpath_h) -Wall -Wextra -Werror -g -c \
 	$(OUTPUT_OPTION) $<
 
 #les règles

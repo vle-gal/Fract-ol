@@ -9,6 +9,7 @@
 # define BUFFER 1000
 # define BUFFER_PRINT 4
 
+# define LARG 1000
 typedef struct 	s_comp
 {
 	double      r;
@@ -33,12 +34,22 @@ typedef	struct	s_other
 	void		*win_ptr;
 }				t_other;
 
+typedef struct	s_im
+{
+	void		*im_ptr;
+	int			*im_data;
+	int 		bpp;
+	int 		size_line;
+	int  		endian;
+}				t_im;
+
 typedef struct  s_main
 {
 	t_other		o;
 	t_comp		c;
 	t_comp		z;
 	t_add		add;
+	t_im		i;
 }               t_main;
 
 /*
